@@ -1,8 +1,8 @@
 # N-Body Gravitational Simulation: Parallel Programming Project Report
 
-**Author:** [Your Name]  
+**Author:** Ahmed Elsheikh , Karim Hossam , Miral Farghaly , Shahd Ayman , Mariam Foaad 
 **Date:** November 28, 2025  
-**Course:** [Your Course Name]  
+**Course:** Distrubuted Systems  
 
 ---
 

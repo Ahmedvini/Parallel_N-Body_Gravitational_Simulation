@@ -267,13 +267,13 @@ Efficiency measures how effectively the threads are utilized. Ideal efficiency i
 
 **Figure 1: Execution Time vs Number of Threads**
 
-[Insert: `analysis/time_vs_threads.png`]
+![ Execution Time vs Number of Threads ](analysis/time_vs_threads.png)
 
 This graph shows how execution time decreases as more threads are used. The sequential baseline (red dashed line) represents the constant sequential time, while the blue line shows the parallel execution time dropping as thread count increases.
 
 **Figure 2: Speedup vs Number of Threads**
 
-[Insert: `analysis/speedup_vs_threads.png`]
+![Speedup vs Number of Threads](analysis/speedup_vs_threads.png)
 
 This graph compares the actual speedup (green line) against the ideal linear speedup (red dashed line). The ideal speedup follows the line y=x (e.g., 4 threads should give 4× speedup). The actual speedup is typically lower due to:
 - Parallel overhead (thread creation, synchronization)

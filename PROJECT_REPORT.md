@@ -120,14 +120,12 @@ The sequential implementation was tested with the following parameters:
 
 | Run | Time (seconds) |
 |-----|----------------|
-| 1   | [Fill in]      |
-| 2   | [Fill in]      |
-| 3   | [Fill in]      |
-| 4   | [Fill in]      |
-| 5   | [Fill in]      |
-| **Average Ts** | **[Fill in]** |
-
-*Note: Fill in these values after running: `cd sequential && ./nbody_sequential 2000 100 0.01 5`*
+| 1   |   1.819848 s   |
+| 2   |   1.840687 s   |
+| 3   |   1.818588 s   |
+| 4   |   1.810240 s   |
+| 5   |   1.807338 s   |
+| **Average Ts** | **1.819340 s** |
 
 ### Compilation
 ```bash
@@ -150,11 +148,6 @@ The `-O3` flag enables aggressive compiler optimizations including loop unrollin
 3. **Shared Memory**: Perfect for multi-core CPUs with shared memory architecture
 4. **Fine-Grained Control**: Easy to specify which loops to parallelize
 5. **Wide Support**: Built into most modern C++ compilers (GCC, Clang, MSVC)
-
-**Hardware Used**: [Fill in your CPU details]
-- CPU: [e.g., Intel Core i7-12700K, AMD Ryzen 9 5900X]
-- Cores: [e.g., 8 cores]
-- Threads: [e.g., 16 threads with hyperthreading]
 
 ### Parallelization Strategy
 
@@ -234,12 +227,11 @@ Tests were conducted with various thread counts to measure scalability:
 
 | Threads | Tp (seconds) | Notes |
 |---------|--------------|-------|
-| 1       | [Fill in]    | Sequential baseline within parallel code |
-| 2       | [Fill in]    | 2 cores |
-| 4       | [Fill in]    | 4 cores |
-| 8       | [Fill in]    | 8 cores |
+| 1       | 1.832036 s   | Sequential baseline within parallel code |
+| 2       | 0.949421 s    | 2 cores |
+| 4       | 0.541975 s    | 4 cores |
+| 8       | 0.543459 s    | 8 cores |
 
-*Note: Fill in these values after running the parallel version with different thread counts*
 
 ### Compilation
 ```bash
@@ -271,18 +263,6 @@ Efficiency(p) = Speedup(p) / p × 100%
 Efficiency measures how effectively the threads are utilized. Ideal efficiency is 100%.
 
 ### Results Comparison
-
-#### Execution Time Table
-
-| Threads (p) | Tp (seconds) | Speedup | Efficiency (%) |
-|-------------|--------------|---------|----------------|
-| 1 (seq)     | [Ts]         | 1.00×   | 100%           |
-| 2           | [Fill in]    | [Fill in] | [Fill in]    |
-| 4           | [Fill in]    | [Fill in] | [Fill in]    |
-| 8           | [Fill in]    | [Fill in] | [Fill in]    |
-
-*Note: Fill in after running analysis script: `python3 analyze_speedup.py`*
-
 #### Performance Graphs
 
 **Figure 1: Execution Time vs Number of Threads**
@@ -344,12 +324,6 @@ This explains why we see good speedup but not perfectly linear scaling.
 ### Summary of Findings
 
 This project successfully demonstrated the power of parallel computing for computationally intensive scientific simulations. The N-body gravitational simulation, with its O(N²) computational complexity, proved to be an excellent candidate for parallelization using OpenMP multi-core processing.
-
-**Key Results**:
-1. **Significant Speedup Achieved**: [e.g., "Achieved 6.2× speedup with 8 threads"]
-2. **Efficient Resource Utilization**: [e.g., "77.5% parallel efficiency with 8 threads"]
-3. **Scalability Demonstrated**: Performance improved consistently as more cores were added
-4. **Real-World Impact**: Simulations that took [X] minutes sequentially now complete in [Y] seconds
 
 ### Lessons Learned About Parallel Programming
 
